@@ -1,115 +1,316 @@
+import { HorizontalLine, SpecificationItem } from "@/components"
+import { specifications } from "@/data"
 import Image from "next/image"
 
 const Home = () => {
     return (
-        <main
-            className={`flex min-h-screen flex-col items-center justify-between p-24`}>
-            <div className='z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex'>
-                <p className='fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30'>
-                    Get started by editing&nbsp;
-                    <code className='font-mono font-bold'>
-                        src/pages/index.tsx
-                    </code>
+        <main>
+            <header className='px-12 py-6 flex flex-col gap-2'>
+                <h1 className='text-4xl font-bold'>
+                    Get your Kemper Profiling Amp
+                </h1>
+                <p className='text-lg text-gray-500'>
+                    All your favorite amps and effects, together in one little
+                    box.
                 </p>
-                <div className='fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none'>
-                    <a
-                        className='pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0'
-                        href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app'
-                        target='_blank'
-                        rel='noopener noreferrer'>
-                        By{" "}
+                <HorizontalLine />
+            </header>
+            <section className='px-12 flex gap-4'>
+                <div className='flex flex-col gap-2 w-2/5'>
+                    <div className='flex justify-center border border-gray-300 rounded-md'>
                         <Image
-                            src='/vercel.svg'
-                            alt='Vercel Logo'
-                            className='dark:invert'
-                            width={100}
-                            height={24}
-                            priority
+                            src='/imgs/1.png'
+                            alt='main'
+                            width={400}
+                            height={400}
                         />
-                    </a>
+                    </div>
+                    <div className='flex gap-2'>
+                        <Image
+                            src='/imgs/1.png'
+                            alt='main'
+                            width={150}
+                            height={150}
+                            className='border-2 border-black rounded-md'
+                        />
+                        <Image
+                            src='/imgs/1.png'
+                            alt='main'
+                            width={150}
+                            height={150}
+                            className='border border-gray-300 rounded-md'
+                        />
+                        <Image
+                            src='/imgs/1.png'
+                            alt='main'
+                            width={150}
+                            height={150}
+                            className='border border-gray-300 rounded-md'
+                        />
+                    </div>
                 </div>
-            </div>
-
-            <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-                <Image
-                    className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
-                    src='/next.svg'
-                    alt='Next.js Logo'
-                    width={180}
-                    height={37}
-                    priority
-                />
-            </div>
-
-            <div className='mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left'>
-                <a
-                    href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app'
-                    className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Docs{" "}
-                        <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Find in-depth information about Next.js features and
-                        API.
-                    </p>
-                </a>
-
-                <a
-                    href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app'
-                    className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Learn{" "}
-                        <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Learn about Next.js in an interactive course
-                        with&nbsp;quizzes!
-                    </p>
-                </a>
-
-                <a
-                    href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app'
-                    className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Templates{" "}
-                        <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Discover and deploy boilerplate example
-                        Next.js&nbsp;projects.
-                    </p>
-                </a>
-
-                <a
-                    href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app'
-                    className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Deploy{" "}
-                        <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Instantly deploy your Next.js site to a shareable URL
-                        with Vercel.
-                    </p>
-                </a>
-            </div>
+                <div className='w-3/5'>
+                    <div className='flex flex-col gap-1'>
+                        <p className='text-sm text-gray-500'>Starting at</p>
+                        <h1 className='text-6xl font-extrabold text-gray-900'>
+                            $1,799
+                        </h1>
+                    </div>
+                    <div className='mt-3 mb-6 flex flex-col gap-2'>
+                        <p className='text-gray-900 font-regular text-lg'>
+                            The KEMPER PROFILER™ is the leading-edge digital
+                            guitar amplifier and all-in-one effects processor.
+                        </p>
+                        <p className='text-gray-500 font-regular text-base'>
+                            Hailed as a game-changer by guitarists the world
+                            over, the PROFILER™ is the first digital guitar amp
+                            to really nail the full and dynamic sound of a
+                            guitar or bass amp.
+                        </p>
+                        <p className='text-gray-500 font-regular text-base'>
+                            This is made possible by a radical, patented
+                            technology and concept which we call PROFILING.
+                        </p>
+                    </div>
+                    <div className='flex flex-col gap-6'>
+                        <div className='flex flex-col gap-2'>
+                            <h4 className='font-medium text-gray-900 text-lg'>
+                                Form Factor
+                            </h4>
+                            <ul className='flex gap-2'>
+                                <li>
+                                    <input
+                                        type='radio'
+                                        id='profiler-head'
+                                        name='hosting'
+                                        value='profiler-head'
+                                        className='hidden peer'
+                                        required
+                                    />
+                                    <label
+                                        htmlFor='profiler-head'
+                                        className='inline-flex items-center justify-between w-full px-3 py-3 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-black'>
+                                        <div className='flex flex-col gap-1'>
+                                            <p className='text-sm text-gray-900 font-medium'>
+                                                Profiler Head
+                                            </p>
+                                            <p className='text-sm text-gray-500 font-regular'>
+                                                Compact amplifier head, perfect
+                                                for a speaker cabinet or desk.
+                                            </p>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input
+                                        type='radio'
+                                        id='profiler-rack'
+                                        name='hosting'
+                                        value='profiler-rack'
+                                        className='hidden peer'
+                                        required
+                                    />
+                                    <label
+                                        htmlFor='profiler-rack'
+                                        className='inline-flex items-center justify-between w-full px-3 py-3 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-black'>
+                                        <div className='flex flex-col gap-1'>
+                                            <p className='text-sm text-gray-900 font-medium'>
+                                                Profiler Rack
+                                            </p>
+                                            <p className='text-sm text-gray-500 font-regular'>
+                                                3U rackmount version of the
+                                                classic profiling amplifier.
+                                            </p>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className='flex flex-col gap-2'>
+                            <h4 className='font-medium text-gray-900 text-lg'>
+                                Power Amp
+                            </h4>
+                            <ul className='flex flex-col gap-2'>
+                                <li>
+                                    <input
+                                        type='radio'
+                                        id='none'
+                                        name='hosting'
+                                        value='none'
+                                        className='hidden peer'
+                                        required
+                                    />
+                                    <label
+                                        htmlFor='none'
+                                        className='inline-flex items-center justify-between w-full px-3 py-3 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-black'>
+                                        <div className='flex flex-col gap-1'>
+                                            <p className='text-sm text-gray-900 font-medium'>
+                                                None
+                                            </p>
+                                            <p className='text-sm text-gray-500 font-regular'>
+                                                Use in the studio or with your
+                                                own power amp.
+                                            </p>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input
+                                        type='radio'
+                                        id='Powered'
+                                        name='hosting'
+                                        value='Powered'
+                                        className='hidden peer'
+                                        required
+                                    />
+                                    <label
+                                        htmlFor='Powered'
+                                        className='inline-flex items-center justify-between w-full px-3 py-3 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-black'>
+                                        <div className='flex justify-between w-full items-center'>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className='text-sm text-gray-900 font-medium'>
+                                                    Powered
+                                                </p>
+                                                <p className='text-sm text-gray-500 font-regular'>
+                                                    Built-in 600W solid state
+                                                    power amp.
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p className='text-sm text-gray-900 font-regular'>
+                                                    + $449
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className='flex flex-col gap-2'>
+                            <h4 className='font-medium text-gray-900 text-lg'>
+                                Power Amp
+                            </h4>
+                            <ul className='flex flex-col gap-2'>
+                                <li>
+                                    <input
+                                        type='radio'
+                                        id='none-1'
+                                        name='hosting'
+                                        value='none-1'
+                                        className='hidden peer'
+                                        required
+                                    />
+                                    <label
+                                        htmlFor='none-1'
+                                        className='inline-flex items-center justify-between w-full px-3 py-3 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-black'>
+                                        <div className='flex flex-col gap-1'>
+                                            <p className='text-sm text-gray-900 font-medium'>
+                                                None
+                                            </p>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input
+                                        type='radio'
+                                        id='profiler-remote'
+                                        name='hosting'
+                                        value='profiler-remote'
+                                        className='hidden peer'
+                                        required
+                                    />
+                                    <label
+                                        htmlFor='profiler-remote'
+                                        className='inline-flex items-center justify-between w-full px-3 py-3 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-black'>
+                                        <div className='flex justify-between w-full items-center'>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className='text-sm text-gray-900 font-medium'>
+                                                    Profiler Remote Foot
+                                                    Controller
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p className='text-sm text-gray-900 font-regular'>
+                                                    + $449
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='my-6'>
+                        <h5 className='text-gray-900 font-medium text-base mb-[20px]'>
+                            Specifications
+                        </h5>
+                        <HorizontalLine />
+                        {specifications.map((specification, index) => {
+                            return (
+                                <SpecificationItem
+                                    {...specification}
+                                    key={index}
+                                />
+                            )
+                        })}
+                    </div>
+                </div>
+            </section>
+            <footer className='bg-gray-50'>
+                <HorizontalLine />
+                <div className='px-12 py-3 flex justify-between gap-2 items-center'>
+                    <div className='flex gap-1'>
+                        <div className='flex gap-1.5 items-start'>
+                            <Image
+                                src='/imgs/globe.png'
+                                alt='main'
+                                width={20}
+                                height={2}
+                            />
+                            <div className='flex flex-col gap-1 items-start'>
+                                <p className='text-gray-900 font-medium text-sm'>
+                                    Free Shipping
+                                </p>
+                                <p className='text-gray-500 w-3/4 font-regular text-sm'>
+                                    Get 2-day free shipping anywhere in North
+                                    America.
+                                </p>
+                            </div>
+                        </div>
+                        <div className='flex gap-1.5 items-start'>
+                            <Image
+                                src='/imgs/shield.png'
+                                alt='main'
+                                width={20}
+                                height={2}
+                            />
+                            <div className='flex flex-col gap-1 items-start'>
+                                <p className='text-gray-900 font-medium text-sm'>
+                                    2 Year Warranty
+                                </p>
+                                <p className='text-gray-500 w-3/4 font-regular text-sm'>
+                                    If anything goes wrong in the first two
+                                    years, we will replace it for free.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='flex gap-3'>
+                        <div className='flex flex-col items-end'>
+                            <h2 className='text-gray-900 font-bold text-3xl'>
+                                $2,717
+                            </h2>
+                            <p className='text-gray-500 font-regular text-sm'>
+                                Need financing?{" "}
+                                <span className='underline'>Learn more</span>
+                            </p>
+                        </div>
+                        <button className='bg-gray-900 text-white py-2 px-3 rounded-md font-medium text-sm'>
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </footer>
         </main>
     )
 }
